@@ -24,4 +24,23 @@ public class AdministradorController {
     public ResponseEntity<Administrador> addAdministrador(@RequestBody Administrador administrador){
         return new ResponseEntity<Administrador>(administradorService.createAdministrador(administrador),HttpStatus.CREATED);
     }
+
+
+    @PutMapping
+    public ResponseEntity<Administrador> updateAdministrador(@RequestBody Administrador administrador){
+        Administrador updatedAdmin = administradorService.updateAdministrador(administrador);
+        if(updatedAdmin != null) {
+            return new ResponseEntity<Administrador>(updatedAdmin, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<Administrador>(HttpStatus.NOT_FOUND);
+        }
+    }
+    //OTRO INTENTO DE ELIMINAR POR BODY
+    @DeleteMapping
+    public ResponseEntity<Void> eliminarAdministrador(@RequestBody Administrador administrador) {
+        administradorService.deleteByDni(administrador.getDni());
+        return ResponseEntity.ok().build();
+    }
+
+
 }

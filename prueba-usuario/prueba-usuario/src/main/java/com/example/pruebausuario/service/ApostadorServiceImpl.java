@@ -21,4 +21,5 @@ public class ApostadorServiceImpl implements ApostadorService{
     public List<Apostador> getAllApostadores() {
         return apostadorRepository.findAll();
     }
+
 }

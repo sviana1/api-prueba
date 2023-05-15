@@ -8,4 +8,5 @@ public interface ApostadorService {
     Apostador createApostador(Apostador apostador);
 
     List<Apostador> getAllApostadores();
+
 }

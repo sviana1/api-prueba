@@ -24,4 +24,5 @@ public class ApostadorController {
     public ResponseEntity<Apostador> addApostador(@RequestBody Apostador apostador){
         return new ResponseEntity<Apostador>(apostadorService.createApostador(apostador),HttpStatus.CREATED);
     }
+
 }
