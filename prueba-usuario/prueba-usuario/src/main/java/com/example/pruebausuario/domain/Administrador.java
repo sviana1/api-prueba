@@ -7,29 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name="administradores")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-public class Administrador {
-    @Id
-    @Column(name="dni")
-    private Long dni;
-
-    @Column(name="nombre", nullable = false)
-    private String nombre;
-
-    @Column(name="telefono", nullable = false)
-    private String telefono;
-
-    @Column(name="correo", nullable = false)
-    private String correo;
-
-    @Column(name="direccion", nullable = false)
-    private String direccion;
-
-    @Column(name="contrasena", nullable = false)
-    private String contrasena;
+@Table(name="administrador")
+public class Administrador extends Usuario{
 
 }
