@@ -1,5 +1,6 @@
 package com.example.pruebausuario.controller;
 
+import com.example.pruebausuario.domain.Administrador;
 import com.example.pruebausuario.domain.Apostador;
 import com.example.pruebausuario.service.ApostadorService;
 import org.springframework.http.HttpStatus;
@@ -25,4 +26,19 @@ public class ApostadorController {
         return new ResponseEntity<Apostador>(apostadorService.createApostador(apostador),HttpStatus.CREATED);
     }
 
+    @PutMapping
+    public ResponseEntity<Apostador> updateApostador(@RequestBody Apostador apostador){
+        Apostador updatedApos= apostadorService.updateApostador(apostador);
+        if(updatedApos != null) {
+            return new ResponseEntity<Apostador>(updatedApos, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<Apostador>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Void> eliminarApostador(@RequestBody Apostador apostador) {
+        apostadorService.deleteByDni(apostador.getDni());
+        return ResponseEntity.ok().build();
+    }
 }
