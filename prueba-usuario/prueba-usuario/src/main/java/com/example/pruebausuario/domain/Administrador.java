@@ -27,7 +27,7 @@ public class Administrador {
     private String correo;
 
     @Column(name="direccion", nullable = false)
-    private String dirección;
+    private String direccion;
 
     @Column(name="contrasena", nullable = false)
     private String contrasena;
