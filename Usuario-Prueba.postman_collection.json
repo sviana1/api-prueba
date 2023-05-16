@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "69059512-4839-4eed-ad2f-e9f89acc43cf",
+		"name": "Usuario-Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27397190"
+	},
+	"item": [
+		{
+			"name": "Listado de administradores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/administrador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"administrador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar un administrador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n       \"dni\": 55555555,\r\n        \"nombre\": \"Pepe Santos\",\r\n        \"telefono\": \"111111\",\r\n        \"correo\": \"pepe@gmail.com\",\r\n        \"direccion\": \"Chile-la esmeralda\",\r\n        \"contrasena\": \"pepe\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/administrador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"administrador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado de apostadores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/apostador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"apostador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar apostador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n       \"dni\": 999999999,\r\n        \"nombre\": \"Patricia Rios\",\r\n        \"telefono\": \"123454321\",\r\n        \"correo\": \"patricia@gmail.com\",\r\n        \"direccion\": \"New York\",\r\n        \"contrasena\": \"patricia\",\r\n        \"saldo\": 30.5\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/apostador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"apostador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar administrador",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": 44444444\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/administrador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"administrador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar administrador",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"dni\": \"56474657\",\r\n        \"nombre\": \"Tito Barrenechea\",\r\n        \"telefono\": \"222222222\",\r\n        \"correo\": \"tito@gmail.com\",\r\n        \"direccion\": \"ecuador-la esmeralda\",\r\n        \"contrasena\": \"tito\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/administrador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"administrador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar apostador",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"dni\": 56565656,\r\n        \"nombre\": \"Lucho Pastor\",\r\n        \"telefono\": \"323232322\",\r\n        \"correo\": \"lucho@gmail.com\",\r\n        \"direccion\": \"Chala\",\r\n        \"contrasena\": \"lucho\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/apostador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"apostador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Apostador",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": 999999999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/apostador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"apostador"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

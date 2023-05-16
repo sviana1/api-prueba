@@ -16,8 +16,8 @@ public class AdministradorController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Administrador>> getAllAdministradores(){
-        return new ResponseEntity<List<Administrador>>(administradorService.getAllAdministradores(), HttpStatus.OK);
+    public ResponseEntity<List<Administrador>> listarAdministradores(){
+        return new ResponseEntity<List<Administrador>>(administradorService.listarAdministradores(), HttpStatus.OK);
     }
 
     @PostMapping
@@ -27,18 +27,17 @@ public class AdministradorController {
 
 
     @PutMapping
-    public ResponseEntity<Administrador> updateAdministrador(@RequestBody Administrador administrador){
-        Administrador updatedAdmin = administradorService.updateAdministrador(administrador);
+    public ResponseEntity<Administrador> actualizarAdministrador(@RequestBody Administrador administrador){
+        Administrador updatedAdmin = administradorService.actualizarAdministrador(administrador);
         if(updatedAdmin != null) {
             return new ResponseEntity<Administrador>(updatedAdmin, HttpStatus.OK);
         } else {
             return new ResponseEntity<Administrador>(HttpStatus.NOT_FOUND);
         }
     }
-    //OTRO INTENTO DE ELIMINAR POR BODY
     @DeleteMapping
     public ResponseEntity<Void> eliminarAdministrador(@RequestBody Administrador administrador) {
-        administradorService.deleteByDni(administrador.getDni());
+        administradorService.eliminarAdministrador(administrador.getDni());
         return ResponseEntity.ok().build();
     }
 

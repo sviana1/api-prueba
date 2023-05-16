@@ -8,13 +8,12 @@ import java.util.List;
 public interface AdministradorService {
     Administrador createAdministrador(Administrador administrador);
 
-    List<Administrador> getAllAdministradores();
+    List<Administrador> listarAdministradores();
     /*void deleteByDni(Long dni); */
 
-    //otro intento
-    Administrador updateAdministrador(Administrador administrador);
+    Administrador actualizarAdministrador(Administrador administrador);
 
     //OTRO INTENTO PARA ELIMINAR
-    void deleteByDni(Long dni);
+    void eliminarAdministrador(Long dni);
 
 }

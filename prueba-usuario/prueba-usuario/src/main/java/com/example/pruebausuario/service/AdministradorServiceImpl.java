@@ -23,13 +23,13 @@ public class AdministradorServiceImpl implements AdministradorService {
     }
 
     @Override
-    public List<Administrador> getAllAdministradores() {
+    public List<Administrador> listarAdministradores() {
         return administradorRepository.findAll();
     }
 
 
     @Override
-    public Administrador updateAdministrador(Administrador administrador) {
+    public Administrador actualizarAdministrador(Administrador administrador) {
         Administrador adminToUpdate = administradorRepository.findById(administrador.getDni()).orElse(null);
         if(adminToUpdate != null) {
             adminToUpdate.setNombre(administrador.getNombre());
@@ -42,9 +42,8 @@ public class AdministradorServiceImpl implements AdministradorService {
             return null;
         }
     }
-    //OTRO INTENTO DE ELIMINAR POR BODY
     @Override
-    public void deleteByDni(Long dni) {
+    public void eliminarAdministrador(Long dni) {
         administradorRepository.deleteById(dni);
     }
 }
