@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/registrar/apostador")
+@RequestMapping("/api/apostador")
 public class ApostadorController {
     private final ApostadorService apostadorService;
     public ApostadorController(ApostadorService apostadorService){

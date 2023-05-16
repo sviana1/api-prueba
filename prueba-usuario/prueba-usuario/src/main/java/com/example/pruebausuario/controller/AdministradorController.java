@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/registrar/administrador")
+@RequestMapping("/api/administrador")
 public class AdministradorController {
     private final AdministradorService administradorService;
     public AdministradorController(AdministradorService administradorService){
