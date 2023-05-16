@@ -17,8 +17,8 @@ public class ApostadorController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Apostador>> getAllApostadores(){
-        return new ResponseEntity<List<Apostador>>(apostadorService.getAllApostadores(), HttpStatus.OK);
+    public ResponseEntity<List<Apostador>> listarApostadores(){
+        return new ResponseEntity<List<Apostador>>(apostadorService.listarApostadores(), HttpStatus.OK);
     }
 
     @PostMapping
@@ -27,8 +27,8 @@ public class ApostadorController {
     }
 
     @PutMapping
-    public ResponseEntity<Apostador> updateApostador(@RequestBody Apostador apostador){
-        Apostador updatedApos= apostadorService.updateApostador(apostador);
+    public ResponseEntity<Apostador> actualizarApostador(@RequestBody Apostador apostador){
+        Apostador updatedApos= apostadorService.actualizarApostador(apostador);
         if(updatedApos != null) {
             return new ResponseEntity<Apostador>(updatedApos, HttpStatus.OK);
         } else {
@@ -38,7 +38,7 @@ public class ApostadorController {
 
     @DeleteMapping
     public ResponseEntity<Void> eliminarApostador(@RequestBody Apostador apostador) {
-        apostadorService.deleteByDni(apostador.getDni());
+        apostadorService.eliminarApostador(apostador.getDni());
         return ResponseEntity.ok().build();
     }
 }

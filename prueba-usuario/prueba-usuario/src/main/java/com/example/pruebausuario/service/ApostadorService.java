@@ -8,8 +8,8 @@ import java.util.List;
 public interface ApostadorService {
     Apostador createApostador(Apostador apostador);
 
-    List<Apostador> getAllApostadores();
-    Apostador updateApostador(Apostador apostador);
+    List<Apostador> listarApostadores();
+    Apostador actualizarApostador(Apostador apostador);
 
-    void deleteByDni(Long dni);
+    void eliminarApostador(Long dni);
 }

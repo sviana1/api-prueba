@@ -19,12 +19,12 @@ public class ApostadorServiceImpl implements ApostadorService{
     }
 
     @Override
-    public List<Apostador> getAllApostadores() {
+    public List<Apostador> listarApostadores() {
         return apostadorRepository.findAll();
     }
 
     @Override
-    public Apostador updateApostador(Apostador apostador) {
+    public Apostador actualizarApostador(Apostador apostador) {
         Apostador adminToUpdate = apostadorRepository.findById(apostador.getDni()).orElse(null);
         if(adminToUpdate != null) {
             adminToUpdate.setNombre(apostador.getNombre());
@@ -41,7 +41,7 @@ public class ApostadorServiceImpl implements ApostadorService{
     }
 
     @Override
-    public void deleteByDni(Long dni) {
+    public void eliminarApostador(Long dni) {
         apostadorRepository.deleteById(dni);
     }
 }
